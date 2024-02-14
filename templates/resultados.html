@@ -1,35 +1,19 @@
-<!-- resultados.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados de la Evaluación</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Resultados de la Evaluación</h1>
-
-    <h2>Historial Crediticio:</h2>
-    <p>Resultado Historial Crediticio: {{ resultado_historial }}</p>
-
-    <h2>Relación Ingresos-Deudas:</h2>
-    <p>Resultado Relación Ingresos-Deudas: {{ resultado_relacion_ingresos_deudas }}</p>
-
-    <h2>Estabilidad Laboral y Residencial:</h2>
-    <p>Resultado Estabilidad Laboral y Residencial: {{ resultado_estabilidad }}</p>
-
-    <h2>Razonabilidad del Monto Solicitado:</h2>
-    <p>Resultado Razonabilidad del Monto Solicitado: {{ resultado_razonabilidad_monto }}</p>
-
-    <h2>Edad y Experiencia Crediticia:</h2>
-    <p>Resultado Edad y Experiencia Crediticia: {{ resultado_edad_experiencia }}</p>
-
-    <h2>Cumplimiento de Normativas:</h2>
-    <p>Resultado Cumplimiento de Normativas: {{ resultado_normativas }}</p>
-
-    <h2>Evaluación de Riesgo General:</h2>
-    <p>Resultado Evaluación de Riesgo General: {{ resultado_evaluacion_riesgo }}</p>
-
-</body>
+    <div class="container">
+        <h1>Resultados de la Evaluación</h1>
+        <p>Nombre y Apellido: {{ nombre }} {{ apellido }}</p>
+        <p>Monto Solicitado: ${{ monto_solicitado }}</p>
+        <p> Resultado de la evaluación:</p>
+        <p>Probabilidad de aprobación según modelo de Machine Learning: {{ probabilidad_aprobacion }}</p>
+        <p>Resultado: {{ resultado_evaluacion }}</p>
+    </div>
+</body>  
 </html>

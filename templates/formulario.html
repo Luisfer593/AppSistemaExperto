@@ -4,54 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Solicitud de Crédito</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Formulario de Solicitud de Crédito</h1>
-    <form action="/procesar_formulario" method="post">
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" required>
+    <div class="container">
+        <h1>Formulario de Solicitud de Crédito</h1>
+        <form action="/procesar_formulario" method="post">
+            <div class="input-container">
+                <label for="nombre">Nombre:</label> 
+                <input type="text" name="nombre" required pattern="[A-Za-záéíóúÁÉÍÓÚ\s]+" title="Por favor ingrese un nombre válido (solo letras y espacios)">
+            </div>
 
-        <label for="apellido">Apellido:</label>
-        <input type="text" name="apellido" required>
+            <div class="input-container">
+                <label for="apellido">Apellido:</label>
+                <input type="text" name="apellido" required pattern="[A-Za-záéíóúÁÉÍÓÚ\s]+" title="Por favor ingrese un apellido válido (solo letras y espacios)">
+            </div>
 
-        <label for="historial_crediticio">Historial Crediticio:</label>
-        <select name="historial_crediticio" required>
-            <option value="Bueno">Bueno</option>
-            <option value="Regular">Regular</option>
-            <option value="Malo">Malo</option>
-        </select>
+            <div class="input-container">
+                <label for="historial_crediticio">Historial Crediticio:</label>
+                <select name="historial_crediticio" required>
+                    <option value="Opciones">Opciones</option>
+                    <option value="Bueno">Bueno</option>
+                    <option value="Regular">Regular</option>
+                    <option value="Malo">Malo</option>
+                </select>
+            </div>
 
-        <label for="ingresos_deudas">Ingresos-Deudas:</label>
-        <select name="ingresos_deudas" required>
-            <option value="Cumple">Cumple</option>
-            <option value="No Cumple">No Cumple</option>
-        </select>
+            <div class="input-container">
+                <label for="ingresos_deudas">Ingresos-Deudas:</label>
+                <select name="ingresos_deudas" required>
+                    <option value="Opciones">Opciones</option>
+                    <option value="Cumple">Cumple</option>
+                    <option value="No Cumple">No Cumple</option>
+                </select>
+            </div>
 
-        <label for="tiempo_empleo_actual">Tiempo de Empleo Actual (en años):</label>
-        <input type="number" name="tiempo_empleo_actual" required>
+            <div class="input-container">
+                <label for="tiempo_empleo_actual">Tiempo de Empleo Actual (en años):</label>
+                <input type="number" name="tiempo_empleo_actual" required min="1" max="20">
+            </div>
 
-        <label for="tiempo_residencia_actual">Tiempo de Residencia Actual (en años):</label>
-        <input type="number" name="tiempo_residencia_actual" required>
+            <div class="input-container">
+                <label for="tiempo_residencia_actual">Tiempo de Residencia Actual (en años):</label>
+                <input type="number" name="tiempo_residencia_actual" required min="1" max="80">
+            </div>
 
-        <label for="monto_solicitado">Monto Solicitado:</label>
-        <input type="number" name="monto_solicitado" step="0.01" required>
+            <div class="input-container">
+                <label for="monto_solicitado">Monto Solicitado:</label>
+                <input type="number" name="monto_solicitado" step="0.01" required min="1000" max="100000">
+            </div>
 
-        <label for="edad">Edad:</label>
-        <input type="number" name="edad" required>
+            <div class="input-container">
+                <label for="edad">Edad:</label>
+                <input type="number" name="edad" required min="18" max="65">
+            </div>
 
-        <label for="experiencia_crediticia">Experiencia Crediticia (en años):</label>
-        <input type="number" name="experiencia_crediticia" required>
+            <div class="input-container">
+                <label for="experiencia_crediticia">Experiencia Crediticia (en años):</label>
+                <input type="number" name="experiencia_crediticia" required min="1" max="60">
+            </div>
 
-        <label for="cumple_normativas">Cumple con Normativas:</label>
-        <select name="cumple_normativas" required>
-            <option value="1">Sí</option>
-            <option value="0">No</option>
-        </select>
+            <!-- Agrega otros campos según sea necesario -->
 
-        <!-- Agrega otros campos según sea necesario -->
+            <button class="boton" type="submit" style="font-size: larger; font-weight: bold;">Enviar Solicitud</button>
 
-        <button type="submit">Enviar Solicitud</button>
-    </form>
+        </form>
+    </div>
 </body>
 </html>
-

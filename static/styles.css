@@ -1,0 +1,90 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://i0.wp.com/aulamarketing.net/wp-content/uploads/2023/03/Que-son-los-sistemas-financieros.jpg?resize=1200%2C640&ssl=1');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #194173f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: azure;
+}
+.resultado {
+    background-color: #021628;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.resultado h2 {
+    color: azure;
+}
+h1 {
+    text-align: center;
+    color: azure;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+}
+
+label {
+    
+    margin-right: 10px;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size:larger;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 8px;
+    margin-bottom: 100px;
+    border: 5px solid #121bc3;
+    border-radius: 5px;
+    box-sizing:content-box;
+}
+
+.input-container {
+    background-color: #021628;
+    padding: 40px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    height: 90px;
+}
+
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.boton{
+    text-align: center;
+    color: azure;
+    font-weight: bold"
+}
